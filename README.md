@@ -3,5 +3,7 @@ I hated using online tools for merging my PDF files so I wrote a simple Python 3
 # Installation
 ```
 git clone https://github.com/gonultasbu/pdf_merge 
-pip install pypdf2
+cd pdf_merge
+cd PyPDF2-1.26.0
+pip install .
 ```
