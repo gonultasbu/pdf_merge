@@ -4,6 +4,7 @@ import os
 #Python 3.6
 #Merges all the PDF files in a folder to a single PDF file, in a new folder. New folder is named "merged".
 pdfs = [a for a in os.listdir() if a.endswith(".pdf")]
+pdfs.sort()
 
 print (pdfs)
 print ('The merging order is going to be as stated above,'
