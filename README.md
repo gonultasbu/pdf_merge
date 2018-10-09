@@ -7,3 +7,9 @@ cd pdf_merge
 cd PyPDF2-1.26.0
 pip install .
 ```
+# TODO
+
+PDF Reordering
+Compression
+GUI
+Web App
