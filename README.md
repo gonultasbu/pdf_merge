@@ -9,7 +9,7 @@ pip install .
 ```
 # TODO
 
-PDF Reordering
-Compression
-GUI
-Web App
+- PDF Reordering
+- Compression
+- GUI
+- Web App
