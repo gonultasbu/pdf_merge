@@ -8,10 +8,8 @@ Merge order is alphabetic.
 
 # Installation
 ```
+pip install pikepdf
 git clone https://github.com/gonultasbu/pdf_merge 
-cd pdf_merge
-cd PyPDF2-1.26.0
-pip install .
 ```
 # TODO
 
