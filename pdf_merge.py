@@ -1,20 +1,22 @@
-from PyPDF2 import PdfFileMerger
+from pikepdf import Pdf
 import os
+from natsort import natsorted
 
-#Python 3.6
+#Python 3.6.12
 #Merges all the PDF files in a folder to a single PDF file, in a new folder. New folder is named "merged".
-pdfs = [a for a in os.listdir() if a.endswith(".pdf")]
-pdfs.sort()
+files = natsorted([a for a in os.listdir() if a.endswith(".pdf")])
+files.sort()
 
-print (pdfs)
+print (files)
 print ('The merging order is going to be as stated above,'
        ' the output PDF in going to be in the "merged" folder, press ENTER to continue')
 input()
 
-merger = PdfFileMerger(strict=False)
+pdf = Pdf.new()
 
-for pdf in pdfs:
-    merger.append(open(pdf, 'rb'))
+for file in files:
+    src = Pdf.open(file)
+    pdf.pages.extend(src.pages)
 
 try:
     os.remove("merged/OUTPUT.pdf")
@@ -26,7 +28,7 @@ try:
 except:
     pass
 
-with open('merged/OUTPUT.pdf', 'wb') as fout:
-    merger.write(fout)
+pdf.save('merged/OUTPUT.pdf')
+
 
 print ('Success!')
