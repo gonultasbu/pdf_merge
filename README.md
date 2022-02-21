@@ -15,5 +15,4 @@ git clone https://github.com/gonultasbu/pdf_merge
 
 - PDF Reordering
 - Compression
-- GUI
 - Web App
